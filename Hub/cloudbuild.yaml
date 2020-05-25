@@ -2,6 +2,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: build-docker-selenium-hub
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/selenium-hub', '.' ]
-  dir: "ui-test/chrome/docker"
+  dir: "Hub"
 images:
 - 'gcr.io/$PROJECT_ID/selenium-hub'
