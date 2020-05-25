@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: build-docker-selenium-node-chrome
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/selenium-node-chrome', '.' ]
+  dir: "NodeChrome"
+images:
+- 'gcr.io/$PROJECT_ID/selenium-node-chrome'
