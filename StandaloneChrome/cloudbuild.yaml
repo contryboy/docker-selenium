@@ -1,6 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: build-docker-selenium-standalone-chrome
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/selenium-standalone-chrome', './StandaloneChrome' ]
+  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/selenium-standalone-chrome', '.' ]
+  dir: "StandaloneChrome"
 images:
 - 'gcr.io/$PROJECT_ID/selenium-standalone-chrome'
